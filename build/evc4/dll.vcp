@@ -1,0 +1,3402 @@
+# Microsoft eMbedded Visual Tools Project File - Name="dll" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE ARMV4) Dynamic-Link Library" 0xa302
+# TARGTYPE "Win32 (WCE ARMV4I) Dynamic-Link Library" 0xa502
+
+CFG=dll - Win32 (WCE ARMV4I) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "dll.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "dll.vcn" CFG="dll - Win32 (WCE ARMV4I) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "dll - Win32 (WCE ARMV4I) Release" (based on "Win32 (WCE ARMV4I) Dynamic-Link Library")
+!MESSAGE "dll - Win32 (WCE ARMV4I) Debug" (based on "Win32 (WCE ARMV4I) Dynamic-Link Library")
+!MESSAGE "dll - Win32 (WCE ARMV4) Release" (based on "Win32 (WCE ARMV4) Dynamic-Link Library")
+!MESSAGE "dll - Win32 (WCE ARMV4) Debug" (based on "Win32 (WCE ARMV4) Dynamic-Link Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMV4IRel"
+# PROP BASE Intermediate_Dir "ARMV4IRel"
+# PROP BASE CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMV4IRel"
+# PROP Intermediate_Dir "ARMV4IRel"
+# PROP CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "THUMB" /d "_THUMB_" /d "ARM" /d "_ARM_" /d "ARMV4I" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "THUMB" /d "_THUMB_" /d "ARM" /d "_ARM_" /d "ARMV4I" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "DLL_EXPORTS" /YX /QRarch4T /QRinterwork-return /O2 /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "..\..\src\wcelibcex\src" /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "DLL_EXPORTS" /FR /YX /QRarch4T /QRinterwork-return /O2 /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /MACHINE:THUMB
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMV4IRel\lua51.dll" /subsystem:$(CESubsystem) /MACHINE:THUMB
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMV4IDbg"
+# PROP BASE Intermediate_Dir "ARMV4IDbg"
+# PROP BASE CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMV4IDbg"
+# PROP Intermediate_Dir "ARMV4IDbg"
+# PROP CPU_ID "{DC70F430-E78B-494F-A9D5-62ADC56443B8}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "THUMB" /d "_THUMB_" /d "ARM" /d "_ARM_" /d "ARMV4I" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "THUMB" /d "_THUMB_" /d "ARM" /d "_ARM_" /d "ARMV4I" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "DLL_EXPORTS" /YX /QRarch4T /QRinterwork-return /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "wcelibcex" /I "..\..\src\wcelibcex" /I "..\..\src\wcelibcex\src" /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "ARM" /D "_ARM_" /D "$(CePlatform)" /D "ARMV4I" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "DLL_EXPORTS" /YX /QRarch4T /QRinterwork-return /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /MACHINE:THUMB
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMV4IDbg\lua51.dll" /subsystem:$(CESubsystem) /MACHINE:THUMB
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMV4Rel"
+# PROP BASE Intermediate_Dir "ARMV4Rel"
+# PROP BASE CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMV4Rel"
+# PROP Intermediate_Dir "ARMV4Rel"
+# PROP CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "NDEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "NDEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "DLL_EXPORTS" /YX /O2 /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "..\..\src\wcelibcex" /I "..\..\src\wcelibcex\src" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "DLL_EXPORTS" /YX /O2 /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMV4Rel\lua51.dll" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMV4Dbg"
+# PROP BASE Intermediate_Dir "ARMV4Dbg"
+# PROP BASE CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMV4Dbg"
+# PROP Intermediate_Dir "ARMV4Dbg"
+# PROP CPU_ID "{ECBEA43D-CD7B-4852-AD55-D4227B5D624B}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "DEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "DEBUG" /d "UNICODE" /d "_UNICODE" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "ARMV4" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "DLL_EXPORTS" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "wcelibcex" /I "..\..\src\wcelibcex" /I "..\..\src\wcelibcex\src" /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D "ARMV4" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "DLL_EXPORTS" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 commctrl.lib coredll.lib /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"ARMV4Dbg\lua51.dll" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ENDIF 
+
+# Begin Target
+
+# Name "dll - Win32 (WCE ARMV4I) Release"
+# Name "dll - Win32 (WCE ARMV4I) Debug"
+# Name "dll - Win32 (WCE ARMV4) Release"
+# Name "dll - Win32 (WCE ARMV4) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=..\..\src\lapi.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LAPI_=\
+	"..\..\src\lapi.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LAPI_=\
+	"..\..\src\lapi.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LAPI_=\
+	"..\..\src\lapi.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LAPI_=\
+	"..\..\src\lapi.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lauxlib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LAUXL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LAUXL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LAUXL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LAUXL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lbaselib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LBASE=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LBASE=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LBASE=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LBASE=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lcode.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LCODE=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LCODE=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LCODE=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LCODE=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldblib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LDBLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LDBLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LDBLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LDBLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldebug.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LDEBU=\
+	"..\..\src\lapi.h"\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LDEBU=\
+	"..\..\src\lapi.h"\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LDEBU=\
+	"..\..\src\lapi.h"\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LDEBU=\
+	"..\..\src\lapi.h"\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldo.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LDO_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LDO_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LDO_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LDO_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldump.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LDUMP=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LDUMP=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LDUMP=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LDUMP=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lfunc.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LFUNC=\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LFUNC=\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LFUNC=\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LFUNC=\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lgc.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LGC_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LGC_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LGC_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LGC_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\linit.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LINIT=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LINIT=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LINIT=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LINIT=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\liolib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LIOLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LIOLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LIOLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LIOLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\llex.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LLEX_=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LLEX_=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LLEX_=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LLEX_=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lmathlib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LMATH=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LMATH=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LMATH=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LMATH=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lmem.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LMEM_=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LMEM_=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LMEM_=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LMEM_=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\loadlib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LOADL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LOADL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LOADL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LOADL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lobject.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LOBJE=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LOBJE=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LOBJE=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LOBJE=\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lopcodes.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LOPCO=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LOPCO=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LOPCO=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LOPCO=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\loslib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LOSLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LOSLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LOSLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LOSLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lparser.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LPARS=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LPARS=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LPARS=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LPARS=\
+	"..\..\src\lcode.h"\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lparser.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lstate.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LSTAT=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LSTAT=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LSTAT=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LSTAT=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llex.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lstring.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LSTRI=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LSTRI=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LSTRI=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LSTRI=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lstrlib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LSTRL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LSTRL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LSTRL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LSTRL=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ltable.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LTABL=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LTABL=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LTABL=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LTABL=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ltablib.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LTABLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LTABLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LTABLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LTABLI=\
+	"..\..\src\lauxlib.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lualib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ltm.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LTM_C=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LTM_C=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LTM_C=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LTM_C=\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lundump.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LUNDU=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LUNDU=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LUNDU=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LUNDU=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lundump.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lvm.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LVM_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LVM_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LVM_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LVM_C=\
+	"..\..\src\ldebug.h"\
+	"..\..\src\ldo.h"\
+	"..\..\src\lfunc.h"\
+	"..\..\src\lgc.h"\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lopcodes.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\lstring.h"\
+	"..\..\src\ltable.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lvm.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lzio.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_LZIO_=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luace.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	"..\..\src\wcelibcex\src\wce_locale.h"\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_string.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_LZIO_=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_LZIO_=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_LZIO_=\
+	"..\..\src\llimits.h"\
+	"..\..\src\lmem.h"\
+	"..\..\src\lobject.h"\
+	"..\..\src\lstate.h"\
+	"..\..\src\ltm.h"\
+	"..\..\src\lua.h"\
+	"..\..\src\luaconf.h"\
+	"..\..\src\lzio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_abort.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_access.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_A=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_unistd.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_A=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_unistd.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_A=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_unistd.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_A=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_unistd.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_asctime.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_AS=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_AS=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_AS=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_AS=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_bsearch.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_B=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_B=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_B=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_B=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_clock.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_ctime.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_C=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_C=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_C=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_C=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_directorymanagement.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_D=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_D=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_D=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_D=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_errno.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_findfile.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_F=\
+	"..\..\src\wcelibcex\src\wce_io.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_F=\
+	"..\..\src\wcelibcex\src\wce_io.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_F=\
+	"..\..\src\wcelibcex\src\wce_io.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_F=\
+	"..\..\src\wcelibcex\src\wce_io.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_freopen.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_getenv.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_G=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_G=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_G=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_G=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_getenvironmentvariable.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_GE=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_GE=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_GE=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_GE=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_getopt.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_gettimeofday.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_GET=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_GET=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_GET=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_GET=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_lfind.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_L=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_L=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_L=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_L=\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_localeconv.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_localtime.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_LO=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_LO=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_LO=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_LO=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_mbstowcs.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_mkdir.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_M=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_M=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_M=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_M=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_mktime.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_MK=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_MK=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_MK=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_MK=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_path.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_P=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_P=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_P=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_P=\
+	"..\..\src\wcelibcex\src\wce_direct.h"\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_rename.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_rewind.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_rmdir.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_R=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_R=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_R=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_R=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_setenvironmentvariable.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_S=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_S=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_S=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_S=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_setlocale.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_stat.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_ST=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_ST=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_ST=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_ST=\
+	"..\..\src\wcelibcex\src\wce_stat.h"\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	"..\..\src\wcelibcex\src\wce_types.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_strerror.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_strftime.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_system.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_SY=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_SY=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_SY=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_SY=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_time.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_T=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_T=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_T=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_T=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_timesys.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_TI=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_TI=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_TI=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_TI=\
+	"..\..\src\wcelibcex\src\wce_time.h"\
+	"..\..\src\wcelibcex\src\wce_timesys.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_tmpfile.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_TM=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_TM=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_TM=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_TM=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_tmpnam.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_TMP=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_TMP=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_TMP=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_TMP=\
+	"..\..\src\wcelibcex\src\wce_stdio.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_unlink.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_U=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_U=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_U=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_U=\
+	"..\..\src\wcelibcex\src\wce_errno.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_wcstombs.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\wcelibcex\src\wce_winbase.c
+
+!IF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Release"
+
+DEP_CPP_WCE_W=\
+	"..\..\src\wcelibcex\src\wce_stdlib.h"\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4I) Debug"
+
+DEP_CPP_WCE_W=\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Release"
+
+DEP_CPP_WCE_W=\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ELSEIF  "$(CFG)" == "dll - Win32 (WCE ARMV4) Debug"
+
+DEP_CPP_WCE_W=\
+	"..\..\src\wcelibcex\src\wce_winbase.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=..\..\src\lapi.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lauxlib.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lcode.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldebug.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ldo.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lfunc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lgc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\llex.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\llimits.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lmem.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lobject.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lopcodes.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lparser.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lstate.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lstring.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ltable.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\ltm.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lua.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\luace.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\luaconf.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lualib.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lundump.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lvm.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\src\lzio.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# End Group
+# End Target
+# End Project
