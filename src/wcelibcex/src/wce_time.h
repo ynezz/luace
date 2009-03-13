@@ -40,6 +40,7 @@
 # error "Only Winddows CE target is supported!"
 #endif
 
+#include <time.h>
 #include <wchar.h>
 
 #ifdef __cplusplus
@@ -136,6 +137,7 @@ Also, there are 97 leap days in every such 400 years interval
     time.h functions
 *******************************************************************************/
 
+clock_t wceex_clock();
 time_t wceex_time(time_t *timer);
 time_t wceex_mktime(struct tm *tmbuff);
 time_t wceex_gmmktime(struct tm *tmbuff);
@@ -149,6 +151,7 @@ char * wceex_ctime_r(const time_t *timer, char *buf);
 wchar_t * wceex_wctime(const time_t *timer);
 // not implemented yet
 //wchar_t * wceex_wctime_r(const time_t *timer, wchar_t *buf);
+size_t wceex_strftime(char *s, size_t size, const char *template, const struct tm *brokentime);
 
 char * wceex_asctime(const struct tm *tmbuff);
 char * wceex_asctime_r(const struct tm *tbuff, char *buff);

@@ -155,6 +155,7 @@ BOOL wceex_SetEnvironmentVariable(LPCWSTR lpName, LPCWSTR lpValue);
 /* Implements SetEnvironmentVariable function from Windows NT API. */
 DWORD wceex_GetEnvironmentVariable(LPCWSTR lpName, LPWSTR lpBuffer, DWORD nSize);
 
+int wceex_system(const char *command);
 
 #ifdef __cplusplus
 }

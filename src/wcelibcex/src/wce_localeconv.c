@@ -1,11 +1,9 @@
-/* 
- * $Id: wce_stdio.h 62 2007-01-17 00:04:39Z mloskot $
+/*
+ * $Id$
  *
- * stdio.h - standard buffered input/output
+ * Defines localeconv() function.
  *
- * Created by Mateusz Loskot (mateusz@loskot.net)
- *
- * Copyright (c) 2006 Taxus SI Ltd.
+ * Copyright (c) 2009 Petr Stetiar <ynezz@true.cz>, Gaben Ltd.
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -28,45 +26,25 @@
  * MIT License:
  * http://opensource.org/licenses/mit-license.php
  *
- * Contact:
- * Taxus SI Ltd.
- * http://www.taxussi.com.pl
- *
  */
 
-#include <windows.h>
+#include <locale.h>
 
-#ifndef WCEEX_STDIO_H
-#define WCEEX_STDIO_H    1
-
-#if !defined(_WIN32_WCE)
-# error "Only Windows CE target is supported!"
-#endif
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif  /* __cplusplus */
-
-#ifndef L_tmpnam
-#define L_tmpnam MAX_PATH
-#endif
-
-/* Functions declarations */
-
-int wceex_rename(const char *oldfile, const char *newfile);
-int wceex_unlink(const char *filename);
-int wceex_wunlink(const wchar_t *filename);
-void wceex_rewind(FILE *stream);
-FILE * wceex_freopen(const char *filename, const char *opentype, FILE *stream);
-UINT wceex_GetTempFileNameA(LPCSTR lpPathName, LPCSTR lpPrefixString, UINT uUnique, LPSTR lpTempFileName);
-DWORD wceex_GetTempPathA(DWORD ccBuffer, LPSTR lpszBuffer);
-FILE * wceex_tmpfile(void);
-char * wceex_tmpnam(char * result);
-
-
-#ifdef __cplusplus
+/*******************************************************************************
+* wceex_localeconv - Reopen stream with different file or mode
+*
+* Description:
+*
+*   The localeconv function returns a pointer to a structure whose components
+*   contain information about how numeric and monetary values should be formatted
+*   in the current locale.
+*
+* Reference:
+*
+*   The GNU C Library Manual
+* 
+*******************************************************************************/
+struct lconv * wceex_localeconv(void)
+{
+	return NULL;
 }
-#endif  /* __cplusplus */
-
-#endif /* #ifndef WCEEX_STDIO_H */

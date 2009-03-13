@@ -45,6 +45,10 @@ extern "C" {
 #define STD_ERROR_HANDLE    (DWORD)-12
 
 HANDLE GetStdHandle( DWORD nStdHandle );
+HMODULE wceex_LoadLibraryA(const char *filename);
+DWORD wceex_FormatMessageA(unsigned long dwFlags, LPCVOID lpSource, DWORD dwMessageId,
+			   DWORD dwLanguageId, LPSTR lpBuffer, DWORD nSize, va_list *Arguments);
+DWORD wceex_GetModuleFileNameA(HMODULE hModule, LPSTR lpFilename, DWORD nSize);
 
 #ifdef __cplusplus
 }
