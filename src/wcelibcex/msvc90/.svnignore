@@ -1,0 +1,8 @@
+*~
+*.swp
+*.ncb
+*.suo
+*.vcproj.*.user 
+*ARM*
+Pocket*
+Smartphone*
