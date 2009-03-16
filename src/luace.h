@@ -144,6 +144,11 @@
 #define _IOLBF          0x0040
 #define _IONBF          0x0004
 
+#define signal(x,y)
+#define SIG_DFL 0
+#define SIGINT 0
+#define _isatty(x) 1
+
 #endif /* UNDER_CE */
 
 #endif /* _LUACE_H_ */

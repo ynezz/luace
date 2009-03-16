@@ -67,8 +67,14 @@ DWORD wceex_FormatMessageA(unsigned long dwFlags, LPCVOID lpSource, DWORD dwMess
 DWORD wceex_GetModuleFileNameA(HMODULE hModule, LPSTR lpFilename, DWORD nSize)
 {
 	DWORD ret = 0;
-	wchar_t *wbuf = wceex_mbstowcs(lpFilename);
+	char *filename = NULL;
+	wchar_t wbuf[MAX_PATH+1] = {0};
 
 	ret = GetModuleFileName(hModule, wbuf, nSize);
+	if (ret > 0) {
+		filename = wceex_wcstombs(wbuf);
+		strncpy(lpFilename, filename, ret);
+	}
+
 	return ret;
 }

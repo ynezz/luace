@@ -128,4 +128,8 @@ EXPORTS
   luaS_newlstr
   luaD_growstack
   luaF_newproto
-  
+  wceex_wcstombs
+  wceex_mbstowcs
+  wceex_getenv
+  wceex_GetEnvironmentVariable
+  wceex_GetModuleFileNameA
