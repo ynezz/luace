@@ -30,19 +30,7 @@
 
 #include <windows.h>
 #include "wce_stdlib.h"
-
-BOOL wceex_CreateProcessA(LPCSTR lpApplicationName, LPCSTR lpCommandLine, LPSECURITY_ATTRIBUTES lpProcessAttributes,
-			  LPSECURITY_ATTRIBUTES lpThreadAttributes, BOOL bInheritHandles, DWORD dwCreationFlags,
-			  LPVOID lpEnvironment, LPSTR lpCurrentDirectory, LPSTARTUPINFO lpStartupInfo,
-			  LPPROCESS_INFORMATION lpProcessInformation)
-{
-	wchar_t *wapp = wceex_mbstowcs(lpApplicationName);
-	wchar_t *wcmd = wceex_mbstowcs(lpCommandLine);
-	wchar_t *wcwd = wceex_mbstowcs(lpCurrentDirectory);
-
-	return CreateProcess(wapp, wcmd, lpProcessAttributes, lpThreadAttributes, bInheritHandles, dwCreationFlags,
-			    lpEnvironment, wcwd, lpStartupInfo, lpProcessInformation);
-}
+#include "wce_errno.h"
 
 /*******************************************************************************
 * wceex_system - Executes command as a shell command
@@ -67,23 +55,78 @@ BOOL wceex_CreateProcessA(LPCSTR lpApplicationName, LPCSTR lpCommandLine, LPSECU
 *******************************************************************************/
 int wceex_system(const char *command)
 {
-	STARTUPINFO si;
-	PROCESS_INFORMATION pi;
+	SHELLEXECUTEINFO sei;
 	unsigned long exit_code = 0;
 	BOOL ret;
+	wchar_t *wpath;
+	wchar_t *wfile;
+	wchar_t *wdir;
+	wchar_t *wparams;
+	wchar_t stopch;
 
-	memset(&si, 0, sizeof(si));
-	si.cb = sizeof(si);
-
-	ret = wceex_CreateProcessA(command, NULL, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
-	if (ret == FALSE)
+	if(command == 0) {
 		return -1;
+	}
 
-	WaitForSingleObject(pi.hProcess, INFINITE);
-	GetExitCodeProcess(pi.hProcess, &exit_code);
+	// trim front
+	while(*command == ' ' || *command == '\t') {
+		command++;
+	}
 
-	CloseHandle(pi.hThread);
-	CloseHandle(pi.hProcess);
+	// if starting char is a quote then look for end quote
+	if(*command == '\"') {
+		command++;
+		stopch = L'\"';
+	} else {
+		stopch = L' ';
+	}
+
+	// create wide version of command
+	wpath = wceex_mbstowcs(command);
+
+	// find the end of the path and start of parameters
+	wparams = wcschr(wpath, stopch);
+	if(wparams != NULL) {
+		*wparams = L'\0';
+		wparams++;
+	}
+
+	// find the filename
+	wfile = wcsrchr(wpath, L'\\');
+	if(wfile != NULL) {
+		wfile++;
+	} else {
+		wfile = wpath;
+	}
+
+	// copy the directory
+	wdir = (wchar_t*) malloc((wfile-wpath + 1) * sizeof(wchar_t));
+	wcsncpy(wdir, wpath, wfile-wpath);
+	wdir[wfile-wpath] = L'\0';
+
+	// set up call
+	memset(&sei, 0, sizeof(sei));
+	sei.cbSize = sizeof(sei);
+	sei.lpFile = wpath;
+	sei.lpParameters = wparams;
+	sei.lpDirectory = wdir;
+	sei.fMask = SEE_MASK_NOCLOSEPROCESS;
+	sei.nShow = SW_SHOWNORMAL;
+
+	// call now
+	ret = ShellExecuteEx(&sei);
+
+	if(ret) {
+		// wait for process to exit
+		WaitForSingleObject(sei.hProcess, INFINITE);
+		GetExitCodeProcess(sei.hProcess, &exit_code);
+		CloseHandle(sei.hProcess);
+	} else {
+		exit_code = -1;
+	}
+
+	free(wdir);
+	free(wpath);
 
 	return exit_code;
 }
