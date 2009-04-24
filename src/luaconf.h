@@ -757,7 +757,17 @@ union luai_Cast { double l_d; long l_l; };
 ** without modifying the main part of the file.
 */
 
+#define LUA_EOZ  (-1)  /* end of stream */
 
+#define lua_isalpha(c)  isalpha(c)
+#define lua_iscntrl(c)  iscntrl(c)
+#define lua_isdigit(c)  isdigit(c)
+#define lua_islower(c)  islower(c)
+#define lua_ispunct(c)  ispunct(c)
+#define lua_isspace(c)  isspace(c)
+#define lua_isupper(c)  isupper(c)
+#define lua_isalnum(c)  (((c) != LUA_EOZ) && isalnum(c))
+#define lua_isxdigit(c) isxdigit(c)
 
 #endif
 
