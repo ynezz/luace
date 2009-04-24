@@ -54,10 +54,13 @@ FILE * wceex_tmpfile(void)
 	wchar_t wpath[MAX_PATH+1] = {0};
 	wchar_t wfilename[MAX_PATH+1] = {0};
 	static char buf[L_tmpnam+1] = {0};
+	FILE *ret;
 
 	GetTempPath(MAX_PATH, wpath);
 	GetTempFileName(wpath, L"_", 0, wfilename);
 	filename = wceex_wcstombs(wfilename);
 
-	return fopen(filename, "wb+");
+	ret = fopen(filename, "wb+");
+	free(filename);
+	return ret;
 }
