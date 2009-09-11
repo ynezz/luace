@@ -151,7 +151,7 @@ char * wceex_ctime_r(const time_t *timer, char *buf);
 wchar_t * wceex_wctime(const time_t *timer);
 // not implemented yet
 //wchar_t * wceex_wctime_r(const time_t *timer, wchar_t *buf);
-size_t wceex_strftime(char *s, size_t size, const char *template, const struct tm *brokentime);
+size_t wceex_strftime(char *s, size_t maxsize, const char *format, const struct tm *tim_p);
 
 char * wceex_asctime(const struct tm *tmbuff);
 char * wceex_asctime_r(const struct tm *tbuff, char *buff);

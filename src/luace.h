@@ -27,12 +27,15 @@
 #define _LUACE_H_
 
 #ifdef UNDER_CE
+
+#if defined(LUA_CORE) || defined(LUA_LIB) || defined(lua_c)
 #include <wce_stdio.h>
 #include <wce_stdlib.h>
 #include <wce_string.h>
 #include <wce_time.h>
 #include <wce_locale.h>
 #include <wce_winbase.h>
+#endif
 
 #ifndef BUFSIZ
 #define BUFSIZ 1024
@@ -46,6 +49,7 @@
 #define L_tmpnam MAX_PATH
 #endif
 
+#if defined(LUA_CORE) || defined(LUA_LIB) || defined(lua_c)
 #ifndef getenv
 #define getenv wceex_getenv
 #endif
@@ -148,6 +152,7 @@
 #define SIG_DFL 0
 #define SIGINT 0
 #define _isatty(x) 1
+#endif
 
 #endif /* UNDER_CE */
 

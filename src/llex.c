@@ -81,7 +81,7 @@ void luaX_init (lua_State *L) {
 const char *luaX_token2str (LexState *ls, int token) {
   if (token < FIRST_RESERVED) {
     lua_assert(token == cast(unsigned char, token));
-    return (iscntrl(token)) ? luaO_pushfstring(ls->L, "char(%d)", token) :
+    return (lua_iscntrl(token)) ? luaO_pushfstring(ls->L, "char(%d)", token) :
                               luaO_pushfstring(ls->L, "%c", token);
   }
   else
@@ -193,13 +193,13 @@ static void trydecpoint (LexState *ls, SemInfo *seminfo) {
 
 /* LUA_NUMBER */
 static void read_numeral (LexState *ls, SemInfo *seminfo) {
-  lua_assert(isdigit(ls->current));
+  lua_assert(lua_isdigit(ls->current));
   do {
     save_and_next(ls);
-  } while (isdigit(ls->current) || ls->current == '.');
+  } while (lua_isdigit(ls->current) || ls->current == '.');
   if (check_next(ls, "Ee"))  /* `E'? */
     check_next(ls, "+-");  /* optional exponent sign */
-  while (isalnum(ls->current) || ls->current == '_')
+  while (lua_isalnum(ls->current) || ls->current == '_')
     save_and_next(ls);
   save(ls, '\0');
   buffreplace(ls, '.', ls->decpoint);  /* follow locale for decimal point */
@@ -229,7 +229,7 @@ static void read_long_string (LexState *ls, SemInfo *seminfo, int sep) {
     inclinenumber(ls);  /* skip it */
   for (;;) {
     switch (ls->current) {
-      case EOZ:
+      case LUA_EOZ:
         luaX_lexerror(ls, (seminfo) ? "unfinished long string" :
                                    "unfinished long comment", TK_EOS);
         break;  /* to avoid warnings */
@@ -280,7 +280,7 @@ static void read_string (LexState *ls, int del, SemInfo *seminfo) {
   save_and_next(ls);
   while (ls->current != del) {
     switch (ls->current) {
-      case EOZ:
+      case LUA_EOZ:
         luaX_lexerror(ls, "unfinished string", TK_EOS);
         continue;  /* to avoid warnings */
       case '\n':
@@ -300,9 +300,9 @@ static void read_string (LexState *ls, int del, SemInfo *seminfo) {
           case 'v': c = '\v'; break;
           case '\n':  /* go through */
           case '\r': save(ls, '\n'); inclinenumber(ls); continue;
-          case EOZ: continue;  /* will raise an error next loop */
+          case LUA_EOZ: continue;  /* will raise an error next loop */
           default: {
-            if (!isdigit(ls->current))
+            if (!lua_isdigit(ls->current))
               save_and_next(ls);  /* handles \\, \", \', and \? */
             else {  /* \xxx */
               int i = 0;
@@ -310,7 +310,7 @@ static void read_string (LexState *ls, int del, SemInfo *seminfo) {
               do {
                 c = 10*c + (ls->current-'0');
                 next(ls);
-              } while (++i<3 && isdigit(ls->current));
+              } while (++i<3 && lua_isdigit(ls->current));
               if (c > UCHAR_MAX)
                 luaX_lexerror(ls, "escape sequence too large", TK_STRING);
               save(ls, c);
@@ -356,7 +356,7 @@ static int llex (LexState *ls, SemInfo *seminfo) {
           }
         }
         /* else short comment */
-        while (!currIsNewline(ls) && ls->current != EOZ)
+        while (!currIsNewline(ls) && ls->current != LUA_EOZ)
           next(ls);
         continue;
       }
@@ -426,31 +426,31 @@ static int llex (LexState *ls, SemInfo *seminfo) {
             return TK_DOTS;   /* ... */
           else return TK_CONCAT;   /* .. */
         }
-        else if (!isdigit(ls->current)) return '.';
+        else if (!lua_isdigit(ls->current)) return '.';
         else {
           read_numeral(ls, seminfo);
           return TK_NUMBER;
         }
       }
-      case EOZ: {
+      case LUA_EOZ: {
         return TK_EOS;
       }
       default: {
-        if (isspace(ls->current)) {
+        if (lua_isspace(ls->current)) {
           lua_assert(!currIsNewline(ls));
           next(ls);
           continue;
         }
-        else if (isdigit(ls->current)) {
+        else if (lua_isdigit(ls->current)) {
           read_numeral(ls, seminfo);
           return TK_NUMBER;
         }
-        else if (isalpha(ls->current) || ls->current == '_') {
+        else if (lua_isalpha(ls->current) || ls->current == '_') {
           /* identifier or reserved word */
           TString *ts;
           do {
             save_and_next(ls);
-          } while (isalnum(ls->current) || ls->current == '_');
+          } while (lua_isalnum(ls->current) || ls->current == '_');
           ts = luaX_newstring(ls, luaZ_buffer(ls->buff),
                                   luaZ_bufflen(ls->buff));
           if (ts->tsv.reserved > 0)  /* reserved word? */

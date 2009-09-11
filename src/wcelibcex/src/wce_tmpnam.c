@@ -72,5 +72,6 @@ char * wceex_tmpnam(char * result)
 		result = buf;
 
 	_snprintf(result, L_tmpnam, "%s", filename);
+	free(filename);
 	return result;
 }

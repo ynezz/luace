@@ -226,19 +226,19 @@ static const char *classend (MatchState *ms, const char *p) {
 static int match_class (int c, int cl) {
   int res;
   switch (tolower(cl)) {
-    case 'a' : res = isalpha(c); break;
-    case 'c' : res = iscntrl(c); break;
-    case 'd' : res = isdigit(c); break;
-    case 'l' : res = islower(c); break;
-    case 'p' : res = ispunct(c); break;
-    case 's' : res = isspace(c); break;
-    case 'u' : res = isupper(c); break;
-    case 'w' : res = isalnum(c); break;
-    case 'x' : res = isxdigit(c); break;
+    case 'a' : res = lua_isalpha(c); break;
+    case 'c' : res = lua_iscntrl(c); break;
+    case 'd' : res = lua_isdigit(c); break;
+    case 'l' : res = lua_islower(c); break;
+    case 'p' : res = lua_ispunct(c); break;
+    case 's' : res = lua_isspace(c); break;
+    case 'u' : res = lua_isupper(c); break;
+    case 'w' : res = lua_isalnum(c); break;
+    case 'x' : res = lua_isxdigit(c); break;
     case 'z' : res = (c == 0); break;
     default: return (cl == c);
   }
-  return (islower(cl) ? res : !res);
+  return (lua_islower(cl) ? res : !res);
 }
 
 
@@ -394,7 +394,7 @@ static const char *match (MatchState *ms, const char *s, const char *p) {
           p=ep; goto init;  /* else return match(ms, s, ep); */
         }
         default: {
-          if (isdigit(uchar(*(p+1)))) {  /* capture results (%0-%9)? */
+          if (lua_isdigit(uchar(*(p+1)))) {  /* capture results (%0-%9)? */
             s = match_capture(ms, s, uchar(*(p+1)));
             if (s == NULL) return NULL;
             p+=2; goto init;  /* else return match(ms, s, p+2) */
@@ -596,7 +596,7 @@ static void add_s (MatchState *ms, luaL_Buffer *b, const char *s,
       luaL_addchar(b, news[i]);
     else {
       i++;  /* skip ESC */
-      if (!isdigit(uchar(news[i])))
+      if (!lua_isdigit(uchar(news[i])))
         luaL_addchar(b, news[i]);
       else if (news[i] == '0')
           luaL_addlstring(b, s, e - s);
@@ -727,14 +727,14 @@ static const char *scanformat (lua_State *L, const char *strfrmt, char *form) {
   while (*p != '\0' && strchr(FLAGS, *p) != NULL) p++;  /* skip flags */
   if ((size_t)(p - strfrmt) >= sizeof(FLAGS))
     luaL_error(L, "invalid format (repeated flags)");
-  if (isdigit(uchar(*p))) p++;  /* skip width */
-  if (isdigit(uchar(*p))) p++;  /* (2 digits at most) */
+  if (lua_isdigit(uchar(*p))) p++;  /* skip width */
+  if (lua_isdigit(uchar(*p))) p++;  /* (2 digits at most) */
   if (*p == '.') {
     p++;
-    if (isdigit(uchar(*p))) p++;  /* skip precision */
-    if (isdigit(uchar(*p))) p++;  /* (2 digits at most) */
+    if (lua_isdigit(uchar(*p))) p++;  /* skip precision */
+    if (lua_isdigit(uchar(*p))) p++;  /* (2 digits at most) */
   }
-  if (isdigit(uchar(*p)))
+  if (lua_isdigit(uchar(*p)))
     luaL_error(L, "invalid format (width or precision too long)");
   *(form++) = '%';
   strncpy(form, strfrmt, p - strfrmt + 1);

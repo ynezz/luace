@@ -33,6 +33,7 @@
 
 #include <wce_winbase.h>
 #include <wce_stdlib.h>
+#include <assert.h>
 
 HANDLE GetStdHandle(DWORD nStdHandle)
 {
@@ -50,17 +51,22 @@ LPWSTR wceex_lstrcpyn( LPWSTR lpString1, LPCWSTR lpString2, int iMaxLength )
 
 HMODULE wceex_LoadLibraryA(const char *filename)
 {
+	HMODULE ret;
 	wchar_t *wfilename = wceex_mbstowcs(filename);
-	return LoadLibrary(wfilename);
+	ret = LoadLibrary(wfilename);
+	free(wfilename);
+	return ret;
 }
 
 DWORD wceex_FormatMessageA(unsigned long dwFlags, LPCVOID lpSource, DWORD dwMessageId,
 		     DWORD dwLanguageId, LPSTR lpBuffer, DWORD nSize, va_list *Arguments)
 {
 	DWORD ret = 0;
-	wchar_t *wbuf = wceex_mbstowcs(lpBuffer);
-
-	ret = FormatMessage(dwFlags, lpSource, dwMessageId, dwLanguageId, wbuf, nSize, Arguments);
+	wchar_t *wbuf = (wchar_t*) malloc(nSize*sizeof(wchar_t));
+	assert((dwFlags & FORMAT_MESSAGE_ALLOCATE_BUFFER) != FORMAT_MESSAGE_ALLOCATE_BUFFER);
+	ret = FormatMessageW(dwFlags, lpSource, dwMessageId, dwLanguageId, wbuf, nSize, Arguments);
+	WideCharToMultiByte(CP_ACP, 0, wbuf, -1, lpBuffer, nSize, NULL, NULL);
+	free(wbuf);
 	return ret;
 }
 
@@ -74,6 +80,7 @@ DWORD wceex_GetModuleFileNameA(HMODULE hModule, LPSTR lpFilename, DWORD nSize)
 	if (ret > 0) {
 		filename = wceex_wcstombs(wbuf);
 		strncpy(lpFilename, filename, ret);
+		free(filename);
 	}
 
 	return ret;

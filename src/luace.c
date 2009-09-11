@@ -91,5 +91,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR wcmdline
 	}
 
 	argc = len;
-	main(argc, argv);
+	ret = main(argc, argv);
+	free(cmd);
+	return ret;
 }
